@@ -14,7 +14,7 @@ type Data = {
 const renderVideo = (videoUrl: string | undefined) => {
   if (!videoUrl) return null;
   return html`
-<video autoplay="true" muted="true" loop="true" playsinline="true" class="w-full h-full object-cover absolute left-0 top-0 bottom-0 right-0">
+<video autoplay muted loop playsinline class="w-full object-cover">
   <source src="${videoUrl}"></source>
 </video>
 `;
@@ -36,11 +36,13 @@ const renderSubheadline = (subheadline: string | undefined) => {
 
 const template = (data: Data) => {
   return html`
-    <div id="teaser-video" class="flex flex-col justify-end text-center bg-hyundai-blue overflow-hidden relative">
+    <div id="teaser-video" class="text-center bg-hyundai-blue overflow-hidden relative">
       ${renderVideo(data.video)}
-      <!--<div class="absolute left-6 top-10">${unsafeHTML(data.logo)}</div>
+      <div class="absolute left-6 top-10">${unsafeHTML(data.logo)}</div>
       <div class="absolute right-6 top-10">${unsafeHTML(data.award)}</div>
-      <div>${renderHeadline(data.headline)} ${renderSubheadline(data.subheadline)}</div>-->
+      <div class="absolute bottom-0 w-full">
+        ${renderHeadline(data.headline)} ${renderSubheadline(data.subheadline)}
+      </div>
     </div>
   `;
 };

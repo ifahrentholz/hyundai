@@ -2,4 +2,8 @@
   height: calc(100svh - 61px);
 
   background: radial-gradient(circle, #5a7590, #244e73, #002c5f);
+
+  video {
+    height: calc(100vh - 61px);
+  }
 }
