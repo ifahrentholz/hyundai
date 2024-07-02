@@ -38,9 +38,9 @@ const template = (data: Data) => {
   return html`
     <div id="teaser-video" class="flex flex-col justify-end text-center bg-hyundai-blue overflow-hidden relative">
       ${renderVideo(data.video)}
-      <div class="absolute left-6 top-10">${unsafeHTML(data.logo)}</div>
+      <!--<div class="absolute left-6 top-10">${unsafeHTML(data.logo)}</div>
       <div class="absolute right-6 top-10">${unsafeHTML(data.award)}</div>
-      <div>${renderHeadline(data.headline)} ${renderSubheadline(data.subheadline)}</div>
+      <div>${renderHeadline(data.headline)} ${renderSubheadline(data.subheadline)}</div>-->
     </div>
   `;
 };
