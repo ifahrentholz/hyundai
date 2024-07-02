@@ -25,6 +25,8 @@ export async function waitForLCP() {
     showSection(firstSection);
   }
 
+  // @ts-ignore
+  document.body.style.display = null;
   const lcpCandidate = document.querySelector<LcpCandidate>('main img');
 
   await new Promise<void>((resolve) => {
