@@ -1,0 +1,22 @@
+.default-content-wrapper {
+  margin-inline: 24px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: HyundaiHead;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: var(--Grey-1000, #1c1b1b);
+    font-family: HyundaiText;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+    margin-block: 16px;
+  }
+}
