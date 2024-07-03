@@ -31,7 +31,7 @@ const renderSubheadline = (subheadline: string | undefined) => {
   if (!subheadline) return null;
   return html`<h3 class="relative z-10 text-white font-hyundaitext text-[20px] m-0 font-normal mb-[40px]">
     ${subheadline}
-  </h2>`;
+  </h3>`;
 };
 
 const template = (data: Data) => {
