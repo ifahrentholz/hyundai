@@ -1,6 +1,8 @@
 import { html, render } from 'lit-html';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
+import './teaser-video.scss';
+
 type Data = {
   video?: string;
   logo?: string;
