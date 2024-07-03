@@ -1,8 +1,6 @@
 import { html, render } from 'lit-html';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
-import './teaser-video.scss';
-
 type Data = {
   video?: string;
   logo?: string;
@@ -12,24 +10,32 @@ type Data = {
 };
 
 const renderVideo = (videoUrl: string | undefined) => {
-  if (!videoUrl) return null;
+  if (!videoUrl) {
+    return null;
+  }
   return html`
-<video autoplay="true" muted="true" loop="true" playsinline="true" class="w-full h-full object-cover absolute left-0 top-0 bottom-0 right-0">
-  <source src="${videoUrl}"></source>
-</video>
-`;
+    <video autoplay muted loop playsinline class="w-full h-full object-cover absolute left-0 top-0 bottom-0 right-0">
+      <source src="${videoUrl}" />
+    </video>
+  `;
 };
 
 const renderHeadline = (headline: string | undefined) => {
   if (!headline) return null;
-  return html`<h2 class="relative z-10 text-white font-hyundaihead text-[48px] font-medium m-0 mb-[8px]">
+  return html`<h2
+    style="color: #fff"
+    class="relative z-10 text-white font-hyundaihead text-[48px] font-medium m-0 mb-[8px]"
+  >
     ${headline}
   </h2>`;
 };
 
 const renderSubheadline = (subheadline: string | undefined) => {
   if (!subheadline) return null;
-  return html`<h3 class="relative z-10 text-white font-hyundaitext text-[20px] m-0 font-normal mb-[40px]">
+  return html`<h3
+    style="color: #fff"
+    class="relative z-10 text-white font-hyundaitext text-[20px] m-0 font-normal mb-[40px]"
+  >
     ${subheadline}
   </h3>`;
 };
