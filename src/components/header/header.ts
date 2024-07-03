@@ -33,7 +33,8 @@ const template = () => {
               <div class="flex flex-row items-start justify-start">
                 <img
                   class="h-[15px] w-[23px] relative overflow-hidden shrink-0"
-                  loading="lazy"
+                  loading="eager"
+                  fetchpriority="high"
                   alt=""
                   src="/public/images/icon-11.svg"
                 />
